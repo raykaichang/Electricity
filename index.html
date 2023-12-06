@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js"></script>
+  <link rel="stylesheet" href="webstyle.css">
+  <title>綠電網站</title>
+</head>
+
+<body>
+
+  <div id="Header">
+    <img id="Header_logo" src="neatlab.png" height="100" />
+    <div class="Header_input">
+      <label>Broker URL</label>
+      <input type="text" id="brokerUrl" placeholder="mqtt://your-broker-url" />
+    </div>
+    <div class="Header_input">
+      <label>MQTT port</label>
+      <input type="text" id="brokerPort" placeholder="Port number" />
+    </div>
+    <div class="Header_input">
+      <button id="connectButton">Connect</button>
+    </div>
+  </div>
+  <div id="content">
+    <div class="InfoColumn1">
+      <div class="InfoPanel" id="SolarInfo">
+        <label>太陽能</label>
+        <table>
+          <tr>
+            <td>
+              <p id="SolarWatt1">0 W /</p>
+            </td>
+            <td>
+              <p id="SolarVoltage1">0 V /</p>
+            </td>
+            <td>
+              <p id="SolarCurrent1">0 A</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p id="SolarWatt2">0 W /</p>
+            </td>
+            <td>
+              <p id="SolarVoltage2">0 V /</p>
+            </td>
+            <td>
+              <p id="SolarCurrent2">0 A</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p id="SolarWatt3">0 W /</p>
+            </td>
+            <td>
+              <p id="SolarVoltage3">0 V /</p>
+            </td>
+            <td>
+              <p id="SolarCurrent3">0 A</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="InfoPanel" id="FirstFloorInfo_1">
+        <label>一樓第一組</label>
+        <table>
+          <tr>
+            <td>
+              <p id="FF1Watt1">0 W /</p>
+            </td>
+            <td>
+              <p id="FF1Voltage1">0 V /</p>
+            </td>
+            <td>
+              <p id="FF1Current1">0 A</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p id="FF1Watt2">0 W /</p>
+            </td>
+            <td>
+              <p id="FF1Voltage2">0 V /</p>
+            </td>
+            <td>
+              <p id="FF1Current2">0 A</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p id="FF1Watt3">0 W /</p>
+            </td>
+            <td>
+              <p id="FF1Voltage3">0 V /</p>
+            </td>
+            <td>
+              <p id="FF1Current3">0 A</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="InfoPanel" id="FirstFloorInfo_2">
+        <label>一樓第二組</label>
+        <table>
+          <tr>
+            <td>
+              <p id="FF2Watt1">0 W /</p>
+            </td>
+            <td>
+              <p id="FF2Voltage1">0 V /</p>
+            </td>
+            <td>
+              <p id="FF2Current1">0 A</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p id="FF2Watt2">0 W /</p>
+            </td>
+            <td>
+              <p id="FF2Voltage2">0 V /</p>
+            </td>
+            <td>
+              <p id="FF2Current2">0 A</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p id="FF2Watt3">0 W</p>
+            </td>
+            <td>
+              <p id="FF2Voltage3">0 V</p>
+            </td>
+            <td>
+              <p id="FF2Current3">0 A</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="InfoColumn2">
+      <div class="InfoPanel" id="FirstFloorAllInfo">
+        <label>一樓總瓦數</label>
+        <p id="FFAWatt">0 W</p>
+      </div>
+      <div class="InfoPanel" id="FirstFloorAllInfo">
+        <label>綠電總瓦數</label>
+        <p id="GreenWatt">0 W</p>
+      </div>
+      <div class="InfoPanel" id="GreenPercentageInfo">
+        <label>綠電比</label>
+        <p id="GreenPercentage">0 %</p>
+      </div>
+    </div>
+    <div class="ChartContainer">
+      <canvas id="InfoChart" height="755" width="1200"></canvas>
+    </div>
+  </div>
+
+  <script src="webscript.js"></script>
+</body>
+
+</html>

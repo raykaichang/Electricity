@@ -1,0 +1,123 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  font-size: 20px;
+}
+
+#Header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  background-color: rgb(245, 191, 44);
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#Header_logo {
+  margin-top: 10px;
+}
+
+.Header_input {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+#brokerUrl {
+  padding: 7px;
+  border: 2px;
+  border-color: rgb(194, 194, 194);
+  border-style: solid;
+  border-radius: 5px;
+  background-color: rgb(194, 194, 194);
+  height: 18px;
+  margin-bottom: 5px;
+}
+
+#brokerPort {
+  padding: 7px;
+  border: 2px;
+  border-color: rgb(194, 194, 194);
+  border-style: solid;
+  border-radius: 5px;
+  background-color: rgb(194, 194, 194);
+  height: 18px;
+  margin-bottom: 5px;
+}
+
+#connectButton {
+  appearance: none;
+  font-size: 20px;
+  padding: 4.5px;
+  margin-top: 23px;
+  margin-bottom: 5px;
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border-style: solid;
+}
+
+#connectButton:active {
+  transform: scale(0.98);
+  background-color: rgb(194, 194, 194);
+  border-color: rgb(194, 194, 194);
+}
+
+#content {
+  width: 100%;
+  margin-left: 17.5px;
+  margin-right: 17.5px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.InfoColumn1 div {
+  padding: 20px;
+  background: rgb(215, 215, 215);
+  box-shadow: 0px 1px 1px rgba(100, 116, 139, 0.06), 0px 1px 2px rgba(100, 116, 139, 0.1);
+  border-radius: 6px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  width: 260px;
+  height: 210px;
+}
+
+.InfoColumn2 {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.InfoColumn2 div {
+  padding: 20px;
+  background: rgb(215, 215, 215);
+  box-shadow: 0px 1px 1px rgba(100, 116, 139, 0.06), 0px 1px 2px rgba(100, 116, 139, 0.1);
+  border-radius: 8px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  width: 200px;
+  height: 120px;
+}
+
+.InfoPanel p {
+  text-align: center;
+  font-size: 19px;
+  margin-top: 10px;
+
+}
+
+#InfoChart {
+  padding: 20px;
+  background: rgb(215, 215, 215);
+  box-shadow: 0px 1px 1px rgba(100, 116, 139, 0.06), 0px 1px 2px rgba(100, 116, 139, 0.1);
+  border-radius: 8px;
+}
